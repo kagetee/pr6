@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo&display=swap">
+    <title>Tomato all</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="row">
+            <div class="wrap-1">
+                <div id="logo2">
+                    <a href="index.html"><img src="img/Logo.png" alt="Logo" style="margin-top: 20px;"></a>
+                </div>
+            </div>
+            <div class="wrap-1 align-right">
+                <div id="search">
+                    <div id="search-in" class="flex">
+                        <input type="search" placeholder="Search">
+                        <button>Submit</button>
+                    </div>
+                </div>
+                <nav id="menu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="">Company Profile</a></li>
+                        <li><a href="tomato.html">Products</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">R & D</a></li>
+                        <li><a href="contact_us.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div id="background2">
+        <img src="img/onion_bg.png" alt="Tomato Hybrids Banner" style="margin-top: 12px; background-size: cover; width: 1920px; height: 480px"/>
+    </div>
+    <div class="content-wrapper">
+        <h1>Agridera Fresh Market Onion Hybrids</h1>
+        <p class="text-content2">×××××</p>
+        <div class="description-text">
+            Agridera strives to be a global leader in the breeding, production, and marketing of onion seeds.
+            Our extensive investment in research and development enables us to provide innovative solutions for
+            growers and consumers in multiple regions worldwide. We focus on developing improved disease-resistant
+            varieties tailored to various market demands.
+            <br/>
+            <br/>
+            Currently, we prioritize breeding onions with resistance to key diseases, including Downy Mildew
+            (Peronospora destructor), Pink Root (Phoma terrestris), and Fusarium Basal Rot (Fusarium oxysporum f.sp. cepae).
+            Additionally, efforts are underway to enhance resistance to emerging threats such as Onion Smut (Urocystis cepulae).
+            <br/>
+            <br/>
+            In terms of agronomic and horticultural traits, we focus on early maturity, bulb size uniformity, strong skin retention,
+            pungency levels, and storability. We aim to combine high-yield potential with resistance to biotic and abiotic stresses
+            across various onion types, including short-day, intermediate-day, and long-day varieties.
+        </div>
+
+        <div class="info-section1">
+            <div class="info-divider1"></div>
+            <div class="info-description1">
+                We concentrate on three main segments: Greenhouse Onion Hybrids, Open-Field Short-Day Onions, and Long-Day Storage Onions.
+            </div>
+        </div>
+
+        <section class="breeding-section">
+            <div class="breeding-columns">
+                <div class="breeding-column">
+                    <h3>Greenhouse Onion Breeding Program</h3>
+                    <div class="column-divider"></div>
+                    <div class="breeding-content">
+                        Targeted for controlled-environment agriculture, particularly in the Mediterranean and North American markets.
+                        Our breeding efforts focus on early maturity, uniform round bulbs, and resistance to Downy Mildew and Fusarium Basal Rot.
+                        Certain hybrids may include additional resistances, such as Botrytis Leaf Blight.
+                    </div>
+                </div>
+
+                <div class="breeding-column">
+                    <h3>Open-Field Short-Day Onions</h3>
+                    <div class="column-divider"></div>
+                    <div class="breeding-content">
+                        Developed for regions such as South America, India, and the Middle East, these hybrids emphasize early bulb formation (120–140 days),
+                        resistance to Pink Root and Fusarium, and suitability for fresh market consumption. Future breeding goals include enhanced bolting tolerance.
+                    </div>
+                </div>
+
+                <div class="breeding-column">
+                    <h3>Long-Day Storage Onions</h3>
+                    <div class="column-divider"></div>
+                    <div class="breeding-content">
+                        Bred for European and North American markets, these varieties are selected for robust skin retention, high yield, and resistance to
+                        Downy Mildew and Fusarium Basal Rot. With extended storage capabilities, they are well-suited for long-term supply chains.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="info-section2">
+            <div class="info-divider2"></div>
+            <div class="info-description2">
+                Agridera operates through an extensive network of international and local distributors, ensuring accessibility to premium-quality onion hybrids worldwide.
+            </div>
+        </div>
+
+        <div class="product-layout" id="onion">
+            <div class="product-block" v-if="products" v-for="p in products">
+                <a :href="'tomato_one.html#'+p.id">
+                    <img :src="p.image" class="tomato-image">
+                </a>
+                <div class="product-item">
+                    <a :href="'tomato_one.html#'+p.id">
+                    <p class="product-details">{{p.title}}</p>
+                    </a>
+                    <p class="product-name-tomato">{{p.short_text}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer">
+        <div class="footer_content">
+            <div id="links">
+                <ul>
+                    <li><a href="">PROFILE</a></li>
+                    <li><a href="">MANAGEMENT</a></li>
+                    <li><a href="tomato.html">PRODUCTS</a></li>
+                    <li><a href="">R&D</a></li>
+                    <li><a href="">LINKS</a></li>
+                    <li><a href="">SITEMAP</a></li>
+                    <li><a href="contact_us.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="social">
+                <a href="https://linkedin.com"><img src="img/Ico_in.png" alt="in"></a>
+                <a href="https://www.instagram.com"><img src="img/Ico_inst.png" alt="inst"></a>
+                <a href="https://www.youtube.com"><img src="img/Ico_tube.png" alt="youtube"></a>
+                <a href="https://twitter.com"><img src="img/Ico_tw.png" alt="twitter"></a>
+                <a href="https://facebook.com"><img src="img/Ico_fb.png" alt="facebook"></a>
+            </div>
+        </div>
+        <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
+    </div>
+</footer>
+</body>
+</html>
